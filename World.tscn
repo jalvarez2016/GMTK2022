@@ -1,3 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://LevelManager.gd" type="Script" id=3]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Baby" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38, 76 )
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 286, 81 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 320.0
+margin_bottom = 16.0
+text = "It is turn"
+autowrap = true

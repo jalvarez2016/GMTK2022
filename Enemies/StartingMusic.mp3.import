@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/StartingMusic.mp3-f089837d68ebce367d92e1b919b71e3f.mp3str"
+
+[deps]
+
+source_file="res://Enemies/StartingMusic.mp3"
+dest_files=[ "res://.import/StartingMusic.mp3-f089837d68ebce367d92e1b919b71e3f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
