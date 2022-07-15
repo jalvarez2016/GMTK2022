@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Resource",
+"base": "Button",
 "class": "TurnManager",
 "language": "GDScript",
 "path": "res://TurnManager.gd"
