@@ -30,3 +30,6 @@ step = 1.0
 value = 100.0
 rounded = true
 percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
