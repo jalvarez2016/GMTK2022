@@ -36,11 +36,12 @@ func _on_EndTurn_enemy_turn_started():
 
 
 func _on_EndTurn_ally_turn_started():
+	for button in buttons:
+		button.disabled = false
 	print("ally turn started")
 
 func _on_EndTurn_pressed():
 	print('endturn button pressed')
 	for button in buttons:
-		#button.get_node().disable = true
-		print("disable buttons here")
+		button.disabled = true
 	turnManager.turn = turnManager.ENEMY_TURN
