@@ -7,6 +7,9 @@
 margin_right = 320.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="UICanvas" type="CanvasLayer" parent="."]
 
@@ -28,6 +31,9 @@ margin_right = 315.0
 margin_bottom = 36.0
 text = "End Turn"
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="ally_turn_started" from="UICanvas/UI/EndTurn" to="." method="_on_EndTurn_ally_turn_started"]
 [connection signal="enemy_turn_started" from="UICanvas/UI/EndTurn" to="." method="_on_EndTurn_enemy_turn_started"]
