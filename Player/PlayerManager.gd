@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+onready var health = $ProgressBar
+
 export(int) var PlayerHealth = 1
 export(int) var PlayerAttack = 1
 export(int) var PlayerDefense = 1
@@ -22,6 +24,5 @@ func _ready():
 	PlayerSpeed += roll_dice(6)
 	PlayerMagicPoints += roll_dice(6)
 
-
-#func _process(delta):
-#	pass
+func loseHealth(newValue):
+	health.value -= newValue
