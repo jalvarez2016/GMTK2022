@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 320.0
+margin_bottom = 179.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_right = 320.0
+margin_bottom = 180.0
+text = "
+
+
+
+
+								Game Over"
