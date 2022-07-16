@@ -18,8 +18,16 @@ text = "
 
 
 
+							GAME OVER!"
 
-								Game Over"
+[node name="Button" type="Button" parent="Panel/RichTextLabel"]
+anchor_right = 0.037
+anchor_bottom = 0.111
+margin_left = 117.0
+margin_top = 91.0
+margin_right = 178.16
+margin_bottom = 110.02
+text = "RETRY"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
