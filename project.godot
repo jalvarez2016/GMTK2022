@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Gmtk 2022"
-run/main_scene="res://WorldStuff/World.tscn"
+run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
 [autoload]

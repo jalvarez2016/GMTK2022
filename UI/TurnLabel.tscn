@@ -1,40 +1,63 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://UI/TurnLabelScript.gd" type="Script" id=1]
 [ext_resource path="res://UI/TurnManager.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Theme" id=2]
+Panel/styles/panel = SubResource( 1 )
+
+[sub_resource type="Theme" id=3]
+RichTextLabel/constants/font_size = 4
 
 [node name="Control" type="Control"]
 margin_right = 320.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="UICanvas" type="CanvasLayer" parent="."]
 
-[node name="UI" type="Control" parent="UICanvas"]
+[node name="UI" type="Panel" parent="UICanvas"]
 margin_right = 320.0
 margin_bottom = 40.0
+theme = SubResource( 2 )
 
 [node name="Info" type="Label" parent="UICanvas/UI"]
 margin_left = 3.0
 margin_top = 3.0
-margin_right = 104.0
-margin_bottom = 17.0
+margin_right = 108.0
+margin_bottom = 18.0
+theme = SubResource( 3 )
 text = "It is ****'s turn"
 
-[node name="EndTurn" type="Button" parent="UICanvas/UI"]
+[node name="Buttons" type="Control" parent="UICanvas/UI"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Attack" type="Button" parent="UICanvas/UI/Buttons"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 72.0
+margin_bottom = 36.0
+text = "Attack"
+
+[node name="Block" type="Button" parent="UICanvas/UI/Buttons"]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 36.0
+text = "Defend"
+
+[node name="EndTurn" type="Button" parent="UICanvas/UI/Buttons"]
 margin_left = 248.0
 margin_top = 16.0
 margin_right = 315.0
 margin_bottom = 36.0
 text = "End Turn"
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[connection signal="ally_turn_started" from="UICanvas/UI/EndTurn" to="." method="_on_EndTurn_ally_turn_started"]
-[connection signal="enemy_turn_started" from="UICanvas/UI/EndTurn" to="." method="_on_EndTurn_enemy_turn_started"]
-[connection signal="pressed" from="UICanvas/UI/EndTurn" to="." method="_on_EndTurn_pressed"]
+[connection signal="ally_turn_started" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_ally_turn_started"]
+[connection signal="enemy_turn_started" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_enemy_turn_started"]
+[connection signal="pressed" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_pressed"]

@@ -2,6 +2,7 @@ extends Control
 
 onready var turnManager = load("res://UI/TurnManager.gd").new()
 onready var uiInfo = $UICanvas/UI/Info
+onready var buttons = $UICanvas/UI/Buttons
 
 func _ready():
 	# Add logic to assign turn to whoever is the fastest
@@ -10,6 +11,7 @@ func _ready():
 			uiInfo.text = "It is the Babies turn"
 		turnManager.ENEMY_TURN:
 			uiInfo.text = "It is the enemies turn"
+	buttons = buttons.get_children();
 	turnManager.connect("ally_turn_started", self, "_on_EndTurn_ally_turn_started")
 	turnManager.connect("enemy_turn_started", self, "_on_EndTurn_enemy_turn_started")
 	
@@ -21,6 +23,7 @@ func on_ally_turn_started():
 	turnManager.turn = turnManager.ENEMY_TURN
 
 func _on_EndTurn_enemy_turn_started():
+	uiInfo.text = "It is the enemies turn"
 	print('enemy turn started')
 	# Hint: Look in the PlayerManager for how to randomly generate a number
 	# Randomly pick a player
@@ -34,9 +37,10 @@ func _on_EndTurn_enemy_turn_started():
 
 func _on_EndTurn_ally_turn_started():
 	print("ally turn started")
-	pass # Replace with function body.
 
 func _on_EndTurn_pressed():
 	print('endturn button pressed')
+	for button in buttons:
+		#button.get_node().disable = true
+		print("disable buttons here")
 	turnManager.turn = turnManager.ENEMY_TURN
-	pass # Replace with function body.
