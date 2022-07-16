@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GameOverBaby.mp3-2f5a18c9c34acf3bee367dbb1303a709.mp3str"
+
+[deps]
+
+source_file="res://Music/GameOverBaby.mp3"
+dest_files=[ "res://.import/GameOverBaby.mp3-2f5a18c9c34acf3bee367dbb1303a709.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

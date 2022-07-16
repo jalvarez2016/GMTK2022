@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music/GameOverBaby.mp3" type="AudioStream" id=1]
 
 [node name="GameOver" type="Node2D"]
 
@@ -18,3 +20,8 @@ text = "
 
 
 								Game Over"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+mix_target = 2
