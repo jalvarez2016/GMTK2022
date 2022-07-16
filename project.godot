@@ -24,10 +24,6 @@ config/name="Gmtk 2022"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-GlobalWorld="*res://World.tscn"
-
 [display]
 
 window/size/width=320
