@@ -5,7 +5,7 @@ onready var uiInfo = $UICanvas/UI/Info
 onready var buttons = $UICanvas/UI/Buttons
 var friendQueue = []
 var currentFriend
-
+var enemyAttaking = false
 #Math functions
 var rng = RandomNumberGenerator.new()
 func chooseEnemyMath(array):
@@ -52,14 +52,21 @@ func end_enemy_turn():
 	turnManager.turn = turnManager.ALLY_TURN
 
 func _on_EndTurn_enemy_turn_started():
-	print('Enemy turn started')
+	print('Enemy turn started at')
 	# Hint: Look in the PlayerManager for how to randomly generate a number
 	# Randomly pick a player
 	# Randomly decide on damage value
 	# Lower health of that player //use a signal to call a dfferent script
+	#var Enemy = get_tree().get_nodes_in_group('Enemy')
+	#Enemy[0].EnimyAttckingNowc = true
 	
+	var Enemy = get_tree().get_nodes_in_group('Enemy')
+	Enemy[0].Attacking()
+	Enemy[0].Attacking()
+	Enemy[0].Attacking()
+	#.EnimyAttckingNow(2)
 	# put the enemies turn on a timer
-	end_enemy_turn()
+	
 	pass # Replace with function body.
 	
 func damage_enemy(enemy, value):
