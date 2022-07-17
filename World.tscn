@@ -132,7 +132,7 @@ position = Vector2( 259, 108 )
 [node name="Sprite" parent="Enemy" index="1"]
 texture = ExtResource( 8 )
 hframes = 6
-frame = 1
+frame = 5
 
 [node name="AnimationPlayer" parent="Enemy" index="3"]
 anims/Attack = SubResource( 3 )
@@ -148,7 +148,6 @@ position = Vector2( 40.5, 153 )
 [node name="Sprite" parent="Unicorn" index="1"]
 texture = ExtResource( 7 )
 hframes = 7
-frame = 1
 
 [node name="AnimationPlayer" parent="Unicorn" index="3"]
 anims/Attack = SubResource( 5 )

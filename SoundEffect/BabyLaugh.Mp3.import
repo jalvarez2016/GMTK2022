@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BabyLaugh.Mp3-92307805723bc8d7a3ee6c56138e0221.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/BabyLaugh.Mp3"
+dest_files=[ "res://.import/BabyLaugh.Mp3-92307805723bc8d7a3ee6c56138e0221.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

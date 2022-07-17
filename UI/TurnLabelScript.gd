@@ -3,6 +3,7 @@ extends Control
 onready var turnManager = load("res://UI/TurnManager.gd").new()
 onready var uiInfo = $UICanvas/UI/Info
 onready var buttons = $UICanvas/UI/Buttons
+onready var animationPlayer = $AnimationPlayer
 var friendQueue = []
 var currentFriend
 var enemyAttaking = false
@@ -103,6 +104,8 @@ func _on_Attack_pressed():
 	buttons[1].disabled = true
 	#end_player_turn()
 	
+
+		
 func _on_Ultimate_pressed():
 	print("ultimating")
 	
