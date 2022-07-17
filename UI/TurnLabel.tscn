@@ -46,12 +46,12 @@ margin_right = 72.0
 margin_bottom = 36.0
 text = "Attack"
 
-[node name="Block" type="Button" parent="UICanvas/UI/Buttons"]
+[node name="Ultimate" type="Button" parent="UICanvas/UI/Buttons"]
 margin_left = 96.0
 margin_top = 16.0
 margin_right = 160.0
 margin_bottom = 36.0
-text = "Defend"
+text = "Ultimate"
 
 [node name="EndTurn" type="Button" parent="UICanvas/UI/Buttons"]
 margin_left = 248.0
@@ -61,6 +61,8 @@ margin_bottom = 36.0
 text = "End Turn"
 script = ExtResource( 2 )
 
+[connection signal="pressed" from="UICanvas/UI/Buttons/Attack" to="." method="_on_Attack_pressed"]
+[connection signal="pressed" from="UICanvas/UI/Buttons/Ultimate" to="." method="_on_Ultimate_pressed"]
 [connection signal="ally_turn_started" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_ally_turn_started"]
 [connection signal="enemy_turn_started" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_enemy_turn_started"]
 [connection signal="pressed" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_pressed"]
