@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boomerang.Mp3-d69cd9e43f06d60e31d8a475b48c866e.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/boomerang.Mp3"
+dest_files=[ "res://.import/boomerang.Mp3-d69cd9e43f06d60e31d8a475b48c866e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

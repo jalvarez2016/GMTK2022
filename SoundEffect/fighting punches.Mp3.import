@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fighting punches.Mp3-30aa2e31d460b5e457bed36d6e4afde5.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/fighting punches.Mp3"
+dest_files=[ "res://.import/fighting punches.Mp3-30aa2e31d460b5e457bed36d6e4afde5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

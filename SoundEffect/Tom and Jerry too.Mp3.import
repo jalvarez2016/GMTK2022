@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tom and Jerry too.Mp3-e294ef8228b80fbc26b67596fa8117e0.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/Tom and Jerry too.Mp3"
+dest_files=[ "res://.import/Tom and Jerry too.Mp3-e294ef8228b80fbc26b67596fa8117e0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

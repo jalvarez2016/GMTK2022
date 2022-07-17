@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bab_crying.Mp3-b1fe09fc49913919b2e8e9a52ec1d00f.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/bab_crying.Mp3"
+dest_files=[ "res://.import/bab_crying.Mp3-b1fe09fc49913919b2e8e9a52ec1d00f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

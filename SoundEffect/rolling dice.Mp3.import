@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rolling dice.Mp3-203209b2c8459d814fcf0102820a6850.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/rolling dice.Mp3"
+dest_files=[ "res://.import/rolling dice.Mp3-203209b2c8459d814fcf0102820a6850.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

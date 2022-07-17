@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/nutcracker.Mp3-d0bbe15e04cc667384744f1e7422ee8b.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/nutcracker.Mp3"
+dest_files=[ "res://.import/nutcracker.Mp3-d0bbe15e04cc667384744f1e7422ee8b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

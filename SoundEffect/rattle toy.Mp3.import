@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rattle toy.Mp3-f54257a7dbcdb1d52d857ece8bbf1b55.mp3str"
+
+[deps]
+
+source_file="res://SoundEffect/rattle toy.Mp3"
+dest_files=[ "res://.import/rattle toy.Mp3-f54257a7dbcdb1d52d857ece8bbf1b55.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
