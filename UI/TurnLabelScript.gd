@@ -44,7 +44,7 @@ func end_player_turn():
 		turnManager.turn = turnManager.ENEMY_TURN
 	else:
 		currentFriend = friendQueue.pop_back()
-		_handle_current_player_turn(currentFriend)
+		_handle_current_player_turn()
 	
 func end_enemy_turn():
 	for button in buttons:
@@ -74,9 +74,9 @@ func _on_EndTurn_ally_turn_started():
 	friendQueue = get_tree().get_nodes_in_group("friends")
 	friendQueue.sort_custom(CustomSorter, "sortArrayAscending")
 	currentFriend = friendQueue.pop_back()
-	_handle_current_player_turn(currentFriend)
+	_handle_current_player_turn()
 	
-func _handle_current_player_turn(currentPlayer):
+func _handle_current_player_turn():
 	print('handling player turn')
 	buttons[0].disabled = false
 	buttons[1].disabled = false

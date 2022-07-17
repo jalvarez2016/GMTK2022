@@ -64,6 +64,9 @@ margin_bottom = 36.0
 text = "End Turn"
 script = ExtResource( 2 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="pressed" from="UICanvas/UI/Buttons/Attack" to="." method="_on_Attack_pressed"]
 [connection signal="pressed" from="UICanvas/UI/Buttons/Ultimate" to="." method="_on_Ultimate_pressed"]
 [connection signal="ally_turn_started" from="UICanvas/UI/Buttons/EndTurn" to="." method="_on_EndTurn_ally_turn_started"]
