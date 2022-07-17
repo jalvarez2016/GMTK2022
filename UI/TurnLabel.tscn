@@ -16,6 +16,9 @@ RichTextLabel/constants/font_size = 4
 margin_right = 320.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="UICanvas" type="CanvasLayer" parent="."]
 

@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 onready var health = $ProgressBar
-
 export(int) var EnemieHealth = 1
 export(int) var EnemieAttack = 1
 export(int) var EnemieDefense = 1
@@ -23,8 +22,9 @@ func Attacking():
 	EnemieDefense += roll_dice(6)
 	EnemieSpeed += roll_dice(6)
 	EnemieMagicPoints += roll_dice(6)
+	var friends = get_tree().get_nodes_in_group('friends')
+	friends[rng.randi_range(0,1) ].get_children()[2].value -= roll_dice(100)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Attacking()
-func loseHealth(newValue):
-	health.value -= newValue
+
