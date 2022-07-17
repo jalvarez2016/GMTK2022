@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://WorldStuff/RichTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://WorldStuff/IntroColor.gd" type="Script" id=1]
 [ext_resource path="res://WorldStuff/ITCBLKAD.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://Music/IntroMusic.mp3" type="AudioStream" id=3]
 [ext_resource path="res://WorldStuff/SceneTransfer.gd" type="Script" id=4]
