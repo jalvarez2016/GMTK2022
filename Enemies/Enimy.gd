@@ -15,7 +15,7 @@ func roll_dice(maxValue):
 	return newValue
 
 func Attacking():
-	var attacking = roll_dice(3)
+	var _attacking = roll_dice(3)
 	
 	EnemieHealth += roll_dice(6)
 	EnemieAttack += roll_dice(6)
