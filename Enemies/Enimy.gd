@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 onready var health = $ProgressBar
+onready var animationPlayer = $AnimationPlayer
 
 var rng = RandomNumberGenerator.new()
 
@@ -21,6 +22,7 @@ func Attacking():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print('hellow')
+	animationPlayer.play("Idle")
 
 func _play_attacked():
 	var sound = $AttackedSound

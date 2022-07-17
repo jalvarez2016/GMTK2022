@@ -3,7 +3,6 @@ extends Control
 onready var turnManager = load("res://UI/TurnManager.gd").new()
 onready var uiInfo = $UICanvas/UI/Info
 onready var buttons = $UICanvas/UI/Buttons
-onready var animationPlayer = $AnimationPlayer
 var friendQueue = []
 var currentFriend
 var enemyAttaking = false
@@ -43,6 +42,7 @@ func end_player_turn():
 			button.disabled = true
 		uiInfo.text = "It is the Enemies turn"
 		turnManager.turn = turnManager.ENEMY_TURN
+	
 	else:
 		currentFriend = friendQueue.pop_back()
 		_handle_current_player_turn()
@@ -52,7 +52,7 @@ func end_enemy_turn():
 		button.disabled = false
 	turnManager.turn = turnManager.ALLY_TURN
 
-func _on_EndTurn_enemy_turn_started():
+func on_EndTurn_enemy_turn_started():
 	print('Enemy turn started at')
 	# Hint: Look in the PlayerManager for how to randomly generate a number
 	# Randomly pick a player

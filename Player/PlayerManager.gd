@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+onready var animationPlayer = $AnimationPlayer
 onready var health = $ProgressBar
 var rng = RandomNumberGenerator.new()
 
@@ -16,6 +17,7 @@ func roll_dice(maxValue):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	animationPlayer.play("Idle")
 	PlayerHealth += roll_dice(6)
 	PlayerAttack += roll_dice(6)
 	PlayerDefense += roll_dice(6)
