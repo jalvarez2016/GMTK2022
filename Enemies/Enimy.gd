@@ -14,7 +14,7 @@ func roll_dice(maxValue):
 
 func Attacking():
 #	if defens == true:
-	var damage = roll_dice(6)
+	var damage = rng.randi_range(10,20)
 	var friends = get_tree().get_nodes_in_group('friends')
 	friends[rng.randi_range(0,1) ].get_children()[2].value -= damage
 #		defens = false

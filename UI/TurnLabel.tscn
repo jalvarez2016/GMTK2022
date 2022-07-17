@@ -50,6 +50,7 @@ margin_bottom = 36.0
 text = "Attack"
 
 [node name="Ultimate" type="Button" parent="UICanvas/UI/Buttons"]
+visible = false
 margin_left = 96.0
 margin_top = 16.0
 margin_right = 160.0
@@ -63,6 +64,9 @@ margin_right = 315.0
 margin_bottom = 36.0
 text = "End Turn"
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

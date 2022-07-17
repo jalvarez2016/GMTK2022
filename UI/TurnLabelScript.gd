@@ -37,6 +37,8 @@ func _ready():
 	turnManager.connect("enemy_turn_started", self, "_on_EndTurn_enemy_turn_started")
 
 func end_player_turn():
+	var enemies = get_tree().get_nodes_in_group("Enemy")
+	if(enemies.size() == 0) : get_tree().change_scene("res://WinScreen.tscn")
 	if(friendQueue.size() == 0):
 		for button in buttons:
 			button.disabled = true
@@ -52,7 +54,7 @@ func end_enemy_turn():
 		button.disabled = false
 	turnManager.turn = turnManager.ALLY_TURN
 
-func on_EndTurn_enemy_turn_started():
+func _on_EndTurn_enemy_turn_started():
 	print('Enemy turn started at')
 	# Hint: Look in the PlayerManager for how to randomly generate a number
 	# Randomly pick a player
@@ -65,14 +67,14 @@ func on_EndTurn_enemy_turn_started():
 	Enemy[0].Attacking()
 	Enemy[0].Attacking()
 	Enemy[0].Attacking()
-	#.EnimyAttckingNow(2)
-	# put the enemies turn on a timer
-	
+	ChekIfPlayerLost()
+	end_enemy_turn()
 	pass # Replace with function body.
 	
 func damage_enemy(enemy, value):
 	enemy.get_children()[4].play()
 	enemy.get_children()[2].value -= value
+	if(enemy.get_children()[2].value <= 0): enemy.queue_free()
 	
 #Quality of life function for ending player and enemy turns		
 	
@@ -115,3 +117,13 @@ func _on_EndTurn_pressed():
 	print('endturn button pressed')
 	end_player_turn()
 
+func PlayerLost():
+	get_tree().change_scene("res://WorldStuff/GameOver.tscn")
+
+func ChekIfPlayerLost():
+	var friends = get_tree().get_nodes_in_group('friends')
+	var CharOne = friends[0].get_children()[2].value
+	var CharTwo = friends[0].get_children()[2].value
+	var Charthree = friends[0].get_children()[2].value
+	if CharOne <= 0 || CharTwo <= 0 || Charthree <= 0:
+		 PlayerLost()
