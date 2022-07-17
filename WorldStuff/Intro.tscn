@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://WorldStuff/RichTextLabel.gd" type="Script" id=1]
 [ext_resource path="res://WorldStuff/ITCBLKAD.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://Music/IntroMusic.mp3" type="AudioStream" id=3]
+[ext_resource path="res://WorldStuff/SceneTransfer.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.25, 1, 1 )
@@ -28,6 +29,7 @@ size = 20
 font_data = ExtResource( 2 )
 
 [node name="IntroScene" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 320.0
@@ -66,9 +68,12 @@ margin_right = 187.0
 margin_bottom = 144.0
 text = "PLAY"
 __meta__ = {
+"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel/Button"]
 stream = ExtResource( 3 )
 autoplay = true
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]

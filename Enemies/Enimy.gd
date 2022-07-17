@@ -21,3 +21,7 @@ func Attacking():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print('hellow')
+
+func _play_attacked():
+	var sound = $AttackedSound
+	sound.play()
