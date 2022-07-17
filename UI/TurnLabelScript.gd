@@ -63,7 +63,7 @@ func _on_EndTurn_enemy_turn_started():
 	pass # Replace with function body.
 	
 func damage_enemy(enemy, value):
-	enemy[4].playing = true
+	enemy.get_children()[4].playing = true
 	enemy.get_children()[2].value -= value
 	
 #Quality of life function for ending player and enemy turns		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Enemies/DiceSolider.png" type="Texture" id=8]
 [ext_resource path="res://Player/Rattle_shaking.png" type="Texture" id=9]
 [ext_resource path="res://SoundEffect/bab_crying.Mp3" type="AudioStream" id=10]
+[ext_resource path="res://SoundEffect/bomb.Mp3" type="AudioStream" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack"
@@ -137,6 +138,9 @@ frame = 1
 [node name="AnimationPlayer" parent="Enemy" index="3"]
 anims/Attack = SubResource( 3 )
 anims/Idle = SubResource( 4 )
+
+[node name="AudioStreamPlayer" parent="Enemy" index="4"]
+stream = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
