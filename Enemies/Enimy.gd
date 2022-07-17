@@ -16,12 +16,12 @@ func Attacking():
 #	if defens == true:
 	var damage = roll_dice(6)
 	var friends = get_tree().get_nodes_in_group('friends')
-	friends[rng.randi_range(0,1) ].get_children()[2].value -= damage
+	friends[rng.randi_range(0,1) ].get_children()[2].value -= 100
 #		defens = false
-
+	print(friends)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print('hellow')
+	
 	animationPlayer.play("Idle")
 
 func _play_attacked():

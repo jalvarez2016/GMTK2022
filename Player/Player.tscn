@@ -7,9 +7,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 24.0
 
-[node name="PlayerBaby" type="StaticBody2D" groups=[
-"friends",
-]]
+[node name="PlayerBaby" type="StaticBody2D" groups=["friends"]]
 script = ExtResource( 2 )
 PlayerHealth = 10
 PlayerAttack = 5

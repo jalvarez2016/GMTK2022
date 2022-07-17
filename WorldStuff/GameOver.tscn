@@ -1,10 +1,19 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Music/GameOverBaby.mp3" type="AudioStream" id=1]
-[ext_resource path="res://WorldStuff/SceneTransfer.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var hasPlayerWon = null
+
+func PlayerLost():
+	get_tree().change_scene(\"res://WorldStuff/GameOver.tscn\")
+
+"
 
 [node name="GameOver" type="Node2D"]
-script = ExtResource( 2 )
+script = SubResource( 1 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 320.0

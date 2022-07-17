@@ -67,8 +67,9 @@ func on_EndTurn_enemy_turn_started():
 	Enemy[0].Attacking()
 	#.EnimyAttckingNow(2)
 	# put the enemies turn on a timer
-	
-	pass # Replace with function body.
+	ChekIfPlayerLost()
+	end_enemy_turn()
+	# Replace with function body.
 	
 func damage_enemy(enemy, value):
 	enemy.get_children()[4].play()
@@ -115,3 +116,14 @@ func _on_EndTurn_pressed():
 	print('endturn button pressed')
 	end_player_turn()
 
+
+func PlayerLost():
+	get_tree().change_scene("res://WorldStuff/GameOver.tscn")
+
+func ChekIfPlayerLost():
+	var friends = get_tree().get_nodes_in_group('friends')
+	var CharOne = friends[0].get_children()[2].value
+	var CharTwo = friends[0].get_children()[2].value
+	var Charthree = friends[0].get_children()[2].value
+	if CharOne <= 0 || CharTwo <= 0 || Charthree <= 0:
+		 PlayerLost()
